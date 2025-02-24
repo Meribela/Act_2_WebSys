@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Act_2_WebSys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="w3-theme-l5">
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+                href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
+                    class="fa fa-home w3-margin-right"></i>Logo</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
+                    class="fa fa-globe"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+                title="Account Settings"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i
+                    class="fa fa-envelope"></i></a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span
+                        class="w3-badge w3-right w3-small w3-green">3</span></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                    <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+                    <a href="#" class="w3-bar-item w3-button">Allyha posted on your wall</a>
+                    <a href="#" class="w3-bar-item w3-button">Angele Hope likes your post</a>
+                </div>
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+                title="My Account">
+                <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+            </a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    </div>
+
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <!-- The Grid -->
+        <div class="w3-row">
+            <!-- Left Column -->
+            <div class="w3-col m3">
+                <!-- Profile -->
+                <div class="w3-card w3-round w3-white">
+                    <div class="w3-container">
+                        <h4 class="w3-center">My Profile</h4>
+                        <p class="w3-center"><img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/481454895_1936363210546852_6627780840784368017_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE2nr65Svliv2i2UuqJ60dZGXusCM9888AZe6wIz3zzwHZydY_JHmGlLn4RzgdTWXao9kHgHD0IPKRiIVt-6EqR&_nc_ohc=eIPJzwN-JzIQ7kNvgHpGZ3h&_nc_oc=Adim73KEh_yzxHcuY3_8XKmeTeyXyWb35dfNpZGEo63JiK0UbiOIaBI0jeDaGwqfTf0&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=A_W3PQhUf5jlnVtnTus8EqU&oh=00_AYCoZL8oWuwlJqOzLhGtF3C_qh1kNUezY6KvIvsGilOokg&oe=67C1E4F3" class="w3-circle"
+                                style="height:106px;width:106px" alt="Avatar"></p>
+                        <hr>
+                        <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
+                        <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
+                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> May 10, 2004</p>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Accordion -->
+                <div class="w3-card w3-round">
+                    <div class="w3-white">
+                        <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+                        <div id="Demo1" class="w3-hide w3-container">
+                            <p>Some text..</p>
+                        </div>
+                        <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
+                        <div id="Demo2" class="w3-hide w3-container">
+                            <p>Some other text..</p>
+                        </div>
+                        <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                                class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+                        <div id="Demo3" class="w3-hide w3-container">
+                            <div class="w3-row-padding">
+                                <br>
+                                <div class="w3-half">
+                                    <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+                                </div>
+                                <div class="w3-half">
+                                    <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                                </div>
+                                <div class="w3-half">
+                                    <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+                                </div>
+                                <div class="w3-half">
+                                    <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+                                </div>
+                                <div class="w3-half">
+                                    <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                                </div>
+                                <div class="w3-half">
+                                    <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Interests -->
+                <div class="w3-card w3-round w3-white w3-hide-small">
+                    <div class="w3-container">
+                        <p>Interests</p>
+                        <p>
+                            <span class="w3-tag w3-small w3-theme-d5">News</span>
+                            <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
+                            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
+                            <span class="w3-tag w3-small w3-theme-d2">Games</span>
+                            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
+                            <span class="w3-tag w3-small w3-theme">Games</span>
+                            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
+                            <span class="w3-tag w3-small w3-theme-l2">Food</span>
+                            <span class="w3-tag w3-small w3-theme-l3">Design</span>
+                            <span class="w3-tag w3-small w3-theme-l4">Art</span>
+                            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Alert Box -->
+                <div
+                    class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+                    <span onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-theme-l3 w3-display-topright">
+                        <i class="fa fa-remove"></i>
+                    </span>
+                    <p><strong>Hey!</strong></p>
+                    <p>People are looking at your profile. Find out who.</p>
+                </div>
+
+                <!-- End Left Column -->
+            </div>
+
+            <!-- Middle Column -->
+            <div class="w3-col m7">
+
+                <div class="w3-row-padding">
+                    <div class="w3-col m12">
+                        <div class="w3-card w3-round w3-white">
+                            <div class="w3-container w3-padding">
+                                <h6 class="w3-opacity">Social Media template by w3.css</h6>
+                                <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
+                                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>
+                                     Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                    <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-1/473267928_1243202686751476_833372065627187844_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEA57K8sxApxppn20_FJzZbrzorvLrulhmvOiu8uu6WGYPEUOc8RVsLWDh4JTq6PjCKbGbCv7Dnx1s-aDYRdsrB&_nc_ohc=WmW42UywkbIQ7kNvgFyj-JG&_nc_oc=AdgvortQkHERHPgftBn2blaKuwhRJkfnYRNS4yYnzO0OJ-tSGMRnIHtCGCPO8Y6Ib5Q&_nc_zt=24&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=Aqxbv2xi8RLQYPot7DR2Qkf&oh=00_AYA21GK0yb_DyjZGM1DQv0Nr2wuAlPztcuUZk7XKYFEdPw&oe=67C1ECAA" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                        style="width:60px">
+                    <span class="w3-right w3-opacity">1 min</span>
+                    <h4>Allyha</h4><br>
+                    <hr class="w3-clear">
+                    <p>“LOVE WITHOUT FILTERS”
+                        Real love goes beyond filters—it’s pure, genuine, and unconditional! This February 14, 2025, let’s celebrate a love that isn’t defined by appearances or expectations but by truth and authenticity.  
+                        No matter your season—single, in a relationship, or still figuring things out—this is for YOU!
+                        Join us for an afternoon of inspiration, connection, and a deeper understanding of real love.  
+                        
+                        📅 February 14, 2025 (Friday)
+                        ⏰ 4:00 PM 
+                        📍 Zone 1, Canitoan, Cagayan de Oro City
+                        👕 Wear your status! 
+
+                        Let your T-shirt do the talking and have fun connecting with others in a meaningful way.
+                        📲 Scan the QR code for updates and be part of the movement! 
+                        Don’t forget to use #YouthAlive_LoveWithoutFilters to share the love!
+                        Let’s celebrate love—the kind that’s real, unshaken, and unfiltered. See you there! ✨</p>
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <div class="w3-half">
+                            <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/476602466_601496785852421_105082946956482970_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH5lQGRuBkd-AOC3JoI0XpfvJaI0nAJ4Z-8lojScAnhn2chDTrxGVQ61ay4jbZOszZWnDjRTihZl9sfc7ucBXhD&_nc_ohc=dpiBitBtkBsQ7kNvgEuFMWm&_nc_oc=Adgg1WTodPkYU5ntRQYqoQdXt6h_hRcVWuIo_lA9xS73kFafDXf_lO4IdOFxc85G88k&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=AqDrZanZnJABKAD_IAYNsRo&oh=00_AYAkTYxAXbrY6I9KvWbQXR6_gpDz5AOoRHOmf7nhRlDz-w&oe=67C1ED85" style="width:100%" alt="Poster"
+                                class="w3-margin-bottom">
+                        </div>
+                        <div class="w3-half">
+                            <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/476805173_601396315862468_3225693345870137721_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3gVkSwxUmCnZuYT93XR53ascPPcdOyLxqxw89x07IvMRAtkGoDI2hEREqGWEMKU2gIu9uyjwmEOMkU1uCa9Wb&_nc_ohc=blNBxwxyv-AQ7kNvgGjVbOM&_nc_oc=AdiWG49RtUJZa7vQ7ZCMQhvE_LkKmL1OuMrn4srkYOiZEVHK-iaBrclCVuniijBQAC0&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=AxIEfZVd4uUFDu2E7YpWmOe&oh=00_AYAy7AiglxLlYdk57HL3S4Pi4vSmXZMnCWz1fAcMNWrIWw&oe=67C20AE0" style="width:100%" alt="T-Shirt" class="w3-margin-bottom">
+                        </div>
+                    </div>
+                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
+                         Like</button>
+                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
+                         Comment</button>
+                </div>
+
+                <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                    <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-1/464967839_1605401386679061_3653525472130108763_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeF1gxfULexzuPfX9lQpxDjeYH3OXNK6qpdgfc5c0rqql74gh2EFc7PViuo1_OiKtG__lGlxHGFTScvLS98OpgUj&_nc_ohc=5gF2PLyQxvoQ7kNvgFXR7UM&_nc_oc=AdhQzy9YpCHEwhpkIrjSvdAhH4sr_aKpuSXVvXU8E8Ai6t6Bni9jPOt_yrVC2FLDHFc&_nc_zt=24&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=A9ndct79hYJpBlyCZiG5n95&oh=00_AYAIYsidw1Ey4pOwWaMmRWY7qMw8QRD-M5soudodpf3ptA&oe=67C1F4D0" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                        style="width:60px">
+                    <span class="w3-right w3-opacity">20 min</span>
+                    <h4>Angele Hope</h4><br>
+                    <hr class="w3-clear">
+                    <p>dalia ras panahon oy, sauna ako pa pero ugma klase na</p>
+                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
+                         Like</button>
+                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
+                         Comment</button>
+                </div>
+
+                <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                    <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-1/316824454_531710745486389_4814943584799165082_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeH8i5cnhfcJWJAEa6Wu74uVck-rz0gxOHxyT6vPSDE4fMkS_uNGCijCAEdPVDnAHGqYapxvv8VaOyqx6ewgXphX&_nc_ohc=nRn1PkrvfNAQ7kNvgEDuDX4&_nc_oc=AdgIAOxKjDnlkiTV9-SSCoxdbnsDxO0Au6ZRBW4Ivh6KB8tpEeMXi1xtAtXvMdu6-Cw&_nc_zt=24&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=AR6UKgs1pwDYWyWAV8RONPp&oh=00_AYCF1uhaRdhrbSDA2kkdIME0soL8-prCWhlmDtgeZ-tWRQ&oe=67C21AF5" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                        style="width:60px">
+                    <span class="w3-right w3-opacity">35 min</span>
+                    <h4>Angie Lou</h4><br>
+                    <hr class="w3-clear">
+                    <p>Rawr</p>
+                    <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/324864203_1791333501253579_4594607545587686697_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGQ9qfqfHZh5A2GV1sGtMOoupr5zK7dN_K6mvnMrt038jeQaQHNei1venZw2ywp9D8hDSxJhaESjDCC_oZgi0c-&_nc_ohc=4u4O5qNhlBIQ7kNvgHgKNSY&_nc_oc=AdhRfKYjY8HLCa1e5wg5Y7sIO1BcDpQuJYnehPJvv8VgBhRI58bJixWOIaFLL4cufRU&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=AmJ-WGy5Lb1Sc2bwe9IyMtY&oh=00_AYBIpcuwdi_gcKbMdK6YroI8ztSV981_uim5edpRBWRoHQ&oe=67C21F73" style="width:100%" class="w3-margin-bottom">
+                    <p>eme HAHAHAHA</p>
+                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
+                         Like</button>
+                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
+                         Comment</button>
+                </div>
+
+                <!-- End Middle Column -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="w3-col m2">
+                <div class="w3-card w3-round w3-white w3-center">
+                    <div class="w3-container">
+                        <p>Upcoming Events:</p>
+                        <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/476888501_1928122908037549_6528892637446227351_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEXRws_OgDi8R2ecK35T_QxkLL9mrVxk8iQsv2atXGTyMCNsGCJEvaa1NtOj-550QwwYLnGff1MxzracooBQXSF&_nc_ohc=j6NOJdONUfsQ7kNvgFRBdra&_nc_oc=Adjmkk_yNOWdBYUTZYWI5VNKpeGFKqbUzWlbPC9wyxsFoh4-EkmyjAaiFqG_o-eOZ_Q&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=AbISFVmyX4ZuffyN7ZrDeg-&oh=00_AYDVoUnHg8Ps6OuYVneicnU5zLOgix94_X4xwMX_S__Bmw&oe=67C21E64" alt="Forest" style="width:100%;">
+                        <p><strong>Holiday</strong></p>
+                        <p>Tuesday 15:00</p>
+                        <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card w3-round w3-white w3-center">
+                    <div class="w3-container">
+                        <p>Friend Request</p>
+                        <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+                        <span>Theresa</span>
+                        <div class="w3-row w3-opacity">
+                            <div class="w3-half">
+                                <button class="w3-button w3-block w3-green w3-section" title="Accept"><i
+                                        class="fa fa-check"></i></button>
+                            </div>
+                            <div class="w3-half">
+                                <button class="w3-button w3-block w3-red w3-section" title="Decline"><i
+                                        class="fa fa-remove"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+                    <p>ADS</p>
+                </div>
+                <br>
+
+                <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+                    <p><i class="fa fa-bug w3-xxlarge"></i></p>
+                </div>
+
+                <!-- End Right Column -->
+            </div>
+
+            <!-- End Grid -->
+        </div>
+
+        <!-- End Page Container -->
+    </div>
+    <br>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d3 w3-padding-16">
+        <h5>Footer</h5>
+    </footer>
+
+    <footer class="w3-container w3-theme-d5">
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+
+    <script src="app.js"> </script>
+
+</body>
+
+</html>
